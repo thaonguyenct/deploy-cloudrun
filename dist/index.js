@@ -8356,7 +8356,7 @@ function run() {
             }
             // set PROJECT ID
             if (projectId) {
-                console.log("4.1")
+                console.log("4.1", projectId)
                 yield setupGcloud.setProject(projectId);
             }
             else if (credentials) {
