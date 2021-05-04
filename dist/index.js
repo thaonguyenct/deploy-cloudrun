@@ -8349,6 +8349,8 @@ function run() {
             if (credentials)
                 yield setupGcloud.authenticateGcloudSDK(credentials);
             const authenticated = yield setupGcloud.isAuthenticated();
+            console.log("444444 ")
+
             if (!authenticated) {
                 throw new Error('Error authenticating the Cloud SDK.');
             }
@@ -8362,14 +8364,20 @@ function run() {
             else if (process.env.GCLOUD_PROJECT) {
                 yield setupGcloud.setProject(process.env.GCLOUD_PROJECT);
             }
+            console.log("5555555 ")
+
             // Fail if no Project Id is provided if not already set.
             const projectIdSet = yield setupGcloud.isProjectIdSet();
+            console.log("6666666 ")
+
             if (!projectIdSet)
                 throw new Error('No project Id provided. Ensure you have set either the project_id or credentials fields.');
             // Install beta components if needed
             if (installBeta)
                 yield setupGcloud.installComponent('beta');
             const toolCommand = setupGcloud.getToolCommand();
+            console.log("7777777 ")
+
             // Get output of gcloud cmd.
             let output = '';
             const stdout = (data) => {
