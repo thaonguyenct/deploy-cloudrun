@@ -1,3 +1,4 @@
+console.log("tren cung: ", process.env)
 module.exports =
 /******/ (function(modules, runtime) { // webpackBootstrap
 /******/ 	"use strict";
