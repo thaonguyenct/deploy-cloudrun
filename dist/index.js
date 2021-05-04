@@ -8208,7 +8208,9 @@ exports.GCLOUD_METRICS_LABEL = 'github-actions-deploy-cloudrun';
  */
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log("truoc: ", process.env)
         core.exportVariable(exports.GCLOUD_METRICS_ENV_VAR, exports.GCLOUD_METRICS_LABEL);
+        console.log("sau: ", process.env)
         try {
             // Get inputs
             // Core inputs
