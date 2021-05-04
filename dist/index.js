@@ -8356,17 +8356,17 @@ function run() {
             }
             // set PROJECT ID
             if (projectId) {
-                yield setupGcloud.setProject(projectId);
                 console.log("4.1")
+                yield setupGcloud.setProject(projectId);
             }
             else if (credentials) {
-                projectId = yield setupGcloud.setProjectWithKey(credentials);
                 console.log("4.2")
+                projectId = yield setupGcloud.setProjectWithKey(credentials);
 
             }
             else if (process.env.GCLOUD_PROJECT) {
-                yield setupGcloud.setProject(process.env.GCLOUD_PROJECT);
                 console.log("4.3")
+                yield setupGcloud.setProject(process.env.GCLOUD_PROJECT);
 
             }
             console.log("5555555 ")
